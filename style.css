@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;  /* wider horizontally */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;  /* less vertical margin */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.weather-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 15px 20px;  /* less vertical padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.current-info {
+  text-align: center;
+  margin-bottom: 15px;  /* less vertical margin */
+}
+
+.current-city {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.current-date {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 5px auto;
+}
+
+.temperature {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.condition {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin: 3px;
+}
+
+.days-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;  /* keep horizontal */
+  margin-top: 10px;
+  gap: 10px;
+  overflow-x: auto;  /* scroll horizontally if needed */
+}
+
+.day-forecast {
+  flex: 0 0 18%;  /* fixed horizontal width ~18% */
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.day-forecast .date {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.day-forecast .icon {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 8px;
+}
+
+.day-forecast .temp,
+.day-forecast .feel,
+.day-forecast .moist,
+.day-forecast .condition {
+  margin: 2px 0;
+}
